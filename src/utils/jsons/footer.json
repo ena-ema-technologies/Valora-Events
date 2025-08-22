@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Services",
+    "links": [
+      "Weddings",
+      "Corporate Events",
+      "Birthdays",
+      "Anniversaries",
+      "Concerts"
+    ]
+  },
+  {
+    "title": "Vendors",
+    "links": ["Designers", "Marketers", "Small Business", "Entrepreneurs"]
+  },
+  {
+    "title": "Resources",
+    "links": ["Blog", "Gallery", "Hosts", "Event Stories"]
+  },
+  {
+    "title": "Company",
+    "links": ["About Us", "Careers", "FAQs", "Teams", "Contact Us"]
+  }
+]

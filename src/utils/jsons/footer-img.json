@@ -1,0 +1,26 @@
+[
+  {
+    "img": "/footer/fb.png",
+    "to_go": "Consultation & Planning "
+  },
+  {
+    "img": "/footer/figma.png",
+    "to_go": "Execution and Management"
+  },
+  {
+    "img": "/footer/github.png",
+    "to_go": "Post-Event Review"
+  },
+  {
+    "img": "/footer/instagram.png",
+    "to_go": "Post-Event Review"
+  },
+  {
+    "img": "/footer/metamask.png",
+    "to_go": "Post-Event Review"
+  },
+  {
+    "img": "/footer/teligram.png",
+    "to_go": "Post-Event Review"
+  }
+]

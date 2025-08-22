@@ -1,0 +1,129 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"); */
+@import "tailwindcss";
+
+.font-jakarta {
+  font-family: var(--font-jakarta), sans-serif;
+}
+
+.font-montserrat {
+  font-family: var(--font-montserrat), sans-serif;
+}
+.corner {
+  @apply rounded-[8px];
+}
+.corner-max {
+  @apply rounded-t-[12px];
+}
+.t1 {
+  leading-trim: both;
+  text-edge: cap;
+  font-feature-settings: "dlig" on;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
+}
+.t-2 {
+  /* also use for section tiles  */
+  font-feature-settings: "dlig" on;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+}
+.t-2-max {
+  font-feature-settings: "dlig" on;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.t-3 {
+  /* used for testimonital cads */
+  color: #2d2d2d;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.6px;
+}
+
+.t-4 {
+  font-feature-settings: "dlig" on;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.24px;
+}
+.t-5 {
+  /* used for section- headline */
+  font-feature-settings: "dlig" on;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -1.44px;
+}
+.t-6 {
+  font-feature-settings: "dlig" on;
+  font-size: 88px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -4.4px;
+}
+.white-gray {
+  color: #4a739c;
+  font-feature-settings: "dlig" on;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+.white-gray-2 {
+  color: #757575;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.nav-links {
+  font-feature-settings: "dlig" on;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+.footer-links {
+  color: var(--Cold-Grey-white, #fff);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.custom-blue {
+  background: #0d80f2;
+}
+.carousel-name {
+  color: #201f2e;
+  font-family: Montserrat;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.95px;
+  text-transform: uppercase;
+}
+.carousel-desc {
+  color: #2d2d2d;
+  font-family: "Plus Jakarta Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
