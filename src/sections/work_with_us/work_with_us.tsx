@@ -1,13 +1,8 @@
 "use client";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import {
-  ArrowUpRight,
-  ChevronLeft,
-  ChevronRight,
-  ExternalLink,
-} from "lucide-react";
+import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
@@ -17,14 +12,14 @@ import { eventStories } from "../../utils/extra/work_with_us";
 
 const Work_With_Us = () => {
   return (
-    <section className="bg-white py-20 px-4">
+    <section className="bg-white pb-20 px-4">
       <div className="container mx-auto">
         {/* Header */}
-        <div className="mb-12">
-          <h2 className="t-5 font-montserrat">
+        <div className="mb-12 space-y-3 md:space-y-2">
+          <h2 className="t-5 font-montserrat md:text-left text-center">
             What it’s like to work with us
           </h2>
-          <p className="section-subtitle text-[#0D141C]">
+          <p className="text-[#0D141C] md:text-left text-center">
             Read some of our event stories that left our clients with memories,
             entertainment and a lasting impression
           </p>

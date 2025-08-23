@@ -15,7 +15,7 @@ const Faq = () => {
   return (
     <section className="py-20 bg-[#F6F8FF] px-4">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-medium text-[#2D2D2D] mb-12 font-montserrat text-center sm:text-left">
+        <h2 className="text-3xl sm:text-4xl font-medium text-[#2D2D2D] mb-12 font-montserrat text-center sm:text-left pl-3">
           Frequently Asked Questions
         </h2>
 

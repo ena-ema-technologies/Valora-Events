@@ -54,8 +54,8 @@ export default function TestimonialCarousel() {
   return (
     <>
       <div className="min-h-screen max-w-[95%] mx-auto py-16">
-        <div className="mb-10 space-y-4">
-          <p className="t-5 font-montserrat">Why choose us?</p>
+        <div className="mb-10 space-y-3">
+          <p className="t-5 font-montserrat">Testimonials</p>
           <p className="t-2">
             From experience to professionalism, everything you need to create
             the next event successful
