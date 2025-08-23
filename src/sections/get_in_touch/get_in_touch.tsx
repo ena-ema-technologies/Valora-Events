@@ -1,7 +1,7 @@
 const Get_in_touch = () => {
   return (
     <>
-      <div className="min-h-screen w-full pb-16 flex items-center justify-between  flex-col md:flex-row text-white custom-blue">
+      <div className="min-h-screen w-full pb-16 flex items-center justify-between  flex-col md:flex-row text-white custom-blue mt-14 pt-16 md:pt-0">
         <div className="md:flex-[45%] flex items-center justify-center h-screen">
           <div className="w-[80%] space-y-5">
             <p className="t-5 font-montserrat">Get in touch with us</p>
@@ -52,7 +52,7 @@ const Get_in_touch = () => {
             </form>
           </div>
         </div>
-        <div className="md:flex-[55%] h-screen">
+        <div className="md:flex-[55%] h-screen hidden md:block">
           <div className="h-full w-full">
             <img
               src="/get_in_touch/1.jpg"

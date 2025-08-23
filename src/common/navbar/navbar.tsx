@@ -85,7 +85,7 @@ const Navbar = () => {
             <button className="btn-2 t-2 base-gold-bg base-white-text">
               Contact us
             </button>
-            <button className="corner md:max-w-[20px] px-1.5 py-0.5 md:px-18 md:py-1.5 flex items-center justify-center border-[1.3px]  bg-[#0D80F2] cursor-pointer">
+            <button className="corner md:max-w-[20px] px-2 py-1 md:px-18 md:py-1.5 flex items-center justify-center border-[1.3px] border-white bg-[#0D80F2] cursor-pointer">
               <p className="t-1 text-white">Get a Free Quote</p>
             </button>
           </div>

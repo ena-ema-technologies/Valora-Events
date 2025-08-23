@@ -37,7 +37,7 @@ const Footer = () => {
 
               <div className="flex items-center gap-x-3">
                 {footerimg.map((i, indx) => (
-                  <div key={indx} className="cursor-pointer">
+                  <div key={indx} className="cursor-pointer h-[20px] w-[20px]">
                     <Image
                       className="object-cover"
                       src={i.img}
