@@ -61,6 +61,11 @@ const Navbar = () => {
               isOpen ? "-rotate-45 -translate-y-[2px]" : ""
             }`}
           ></span>
+          <span
+            className={`block w-4 h-[2px] bg-black mt-1 transition-all duration-300 ${
+              isOpen ? "hidden" : ""
+            }`}
+          ></span>
         </button>
       </div>
       <div

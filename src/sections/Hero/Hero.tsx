@@ -3,9 +3,10 @@
 import { images } from "@/assets";
 import { Calendar } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Button } from "../../../components/ui/button";
 import { Input } from "../../../components/ui/input";
+
 import {
   Select,
   SelectContent,
@@ -21,11 +22,14 @@ export default function Hero() {
     email: "",
     date: "",
   });
+
+  const dateInputRef = useRef<HTMLInputElement>(null);
+
   const { brand1, brand2, brand3, brand4 } = images;
   const brands = [brand1, brand2, brand3, brand4];
 
   return (
-    <div className="min-h-screen relative pt-24">
+    <div className="min-h-screen relative pt-24 pb-10">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -35,7 +39,7 @@ export default function Hero() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0" />
       </div>
 
       {/* Content */}
@@ -60,11 +64,11 @@ export default function Hero() {
           </p>
 
           {/* Booking Form */}
-          <div className="w-full max-w-6xl bg-white/10 backdrop-blur-sm rounded-3xl p-6 border border-white/20">
+          <div className="w-full max-w-6xl bg-black/10 backdrop-blur-sm rounded-3xl p-6 border border-white/20">
             <p className="text-white font-montserrat text-2xl font-bold mb-2 text-center">
               Quick event booking
             </p>
-            <p className="text-white/80 text-base font-medium text-center mb-8">
+            <p className="text-white text-base font-medium text-center mb-8">
               Just complete the form and we'll handle the rest
             </p>
 
@@ -80,7 +84,7 @@ export default function Hero() {
                   <SelectTrigger className="bg-white/10 border-white/20 text-white placeholder:text-white/60 h-12 rounded-lg">
                     <SelectValue placeholder="Event Type" />
                   </SelectTrigger>
-                  <SelectContent>
+                  <SelectContent className="bg-white/30 text-white">
                     <SelectItem value="corporate">Corporate Event</SelectItem>
                     <SelectItem value="wedding">Wedding</SelectItem>
                     <SelectItem value="birthday">Birthday Party</SelectItem>
@@ -114,23 +118,34 @@ export default function Hero() {
               {/* Date */}
               <div className="relative">
                 <Input
+                  ref={dateInputRef}
                   type="date"
                   placeholder="Date"
                   value={formData.date}
                   onChange={(e) =>
                     setFormData({ ...formData, date: e.target.value })
                   }
-                  className="bg-white/10 border-white/20 text-white placeholder:text-white/60 h-12 rounded-lg"
+                  className="bg-white/10 border-white/20 text-white placeholder:text-white/60 h-12 rounded-lg w-full pr-10 
+                             [&::-webkit-calendar-picker-indicator]:hidden" // ✅ Hide default browser icon
                 />
-                <Calendar className="absolute right-3 top-1/2 transform -translate-y-1/2 text-white/60 w-5 h-5 pointer-events-none" />
+
+                {/* Calendar Icon clickable */}
+                <button
+                  type="button"
+                  onClick={() => dateInputRef.current?.showPicker()}
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-white/60 hover:text-white focus:outline-none"
+                >
+                  <Calendar className="w-5 h-5" />
+                </button>
               </div>
-              <Button className="bg-secondary hover:bg-secondary text-white px-8 py-3 rounded-lg font-semibold text-lg h-12 min-w-[200px]">
+
+              <Button className="bg-[#FF982F] hover:bg-[#ff972fdc] text-white px-8 py-3 rounded-lg font-semibold text-lg h-12 min-w-[200px] cursor-pointer">
                 Get a free quote
               </Button>
             </div>
 
             <div className="text-center">
-              <p className="text-white/70 text-sm mt-4">
+              <p className="text-white text-sm mt-4">
                 We'll get back to you within 24 hours
               </p>
             </div>
@@ -138,21 +153,14 @@ export default function Hero() {
         </div>
 
         {/* Partners Section */}
-        <div className="py-16 lg:py-28">
-          <div className=" bg-white/10 backdrop-blur-xs text-center py-5">
-            <p className="text-[#f6ebeb] mb-4 font-normal font-montserrat">
+        <div className="py-16">
+          <div className=" bg-white/10 backdrop-blur-md text-center py-5">
+            <p className="text-black mb-4 font-montserrat shadow-2xl">
               Our trusted partners
             </p>
             <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
-              {/* Partner Logo 1 */}
               {brands?.map((brand, idx) => (
-                <Image
-                  key={idx}
-                  src={brand}
-                  alt="brand"
-                  width={100}
-                  height={30}
-                />
+                <Image key={idx} src={brand} alt="brand" width={120} />
               ))}
             </div>
           </div>
