@@ -81,10 +81,10 @@ export default function Hero() {
                     setFormData({ ...formData, eventType: value })
                   }
                 >
-                  <SelectTrigger className="bg-white/10 border-white/20 text-white placeholder:text-white/60 h-12 rounded-lg">
+                  <SelectTrigger className="bg-black/20 border-white/20 text-white placeholder:text-white/60 h-12 rounded-lg">
                     <SelectValue placeholder="Event Type" />
                   </SelectTrigger>
-                  <SelectContent className="bg-white/30 text-white">
+                  <SelectContent className="bg-black/20 text-white">
                     <SelectItem value="corporate">Corporate Event</SelectItem>
                     <SelectItem value="wedding">Wedding</SelectItem>
                     <SelectItem value="birthday">Birthday Party</SelectItem>
@@ -101,7 +101,7 @@ export default function Hero() {
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
                 }
-                className="bg-white/10 border-white/20 text-white placeholder:text-white/60 h-12 rounded-lg"
+                className="bg-black/20 border-white/20 text-white placeholder:text-white/60 h-12 rounded-lg"
               />
 
               {/* Email Address */}
@@ -112,7 +112,7 @@ export default function Hero() {
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
-                className="bg-white/10 border-white/20 text-white placeholder:text-white/60 h-12 rounded-lg"
+                className="bg-black/20 border-white/20 text-white placeholder:text-white/60 h-12 rounded-lg"
               />
 
               {/* Date */}
@@ -125,7 +125,7 @@ export default function Hero() {
                   onChange={(e) =>
                     setFormData({ ...formData, date: e.target.value })
                   }
-                  className="bg-white/10 border-white/20 text-white placeholder:text-white/60 h-12 rounded-lg w-full pr-10 
+                  className="bg-black/20 border-white/20 text-white placeholder:text-white/60 h-12 rounded-lg w-full pr-10 
                              [&::-webkit-calendar-picker-indicator]:hidden" // ✅ Hide default browser icon
                 />
 
@@ -154,7 +154,7 @@ export default function Hero() {
 
         {/* Partners Section */}
         <div className="py-16">
-          <div className=" bg-white/10 backdrop-blur-md text-center py-5">
+          <div className=" bg-white/10 backdrop-blur-xs text-center py-5">
             <p className="text-black mb-4 font-montserrat shadow-2xl">
               Our trusted partners
             </p>

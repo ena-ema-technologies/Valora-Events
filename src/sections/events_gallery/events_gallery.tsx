@@ -10,6 +10,8 @@ import lgZoom from "lightgallery/plugins/zoom";
 
 import events_gallery from "../../utils/jsons/events_gallery.json";
 import events_gallery_buttons from "../../utils/jsons/events_gallery_buttons.json";
+
+import Marquee from "react-fast-marquee";
 const Events_gallery = () => {
   return (
     <>
@@ -20,7 +22,8 @@ const Events_gallery = () => {
             {events_gallery_buttons.map((i, index) => (
               <button
                 key={index}
-                className="corner md:max-w-[20px] px-1.5 py-0.5 md:px-18 md:py-1.5 flex items-center justify-center border-[1.3px] border-[#0D80F2] bg-[#0d80f24c] cursor-pointer"
+                className={`corner md:max-w-[20px] px-1.5 py-0.5 md:px-18 md:py-1.5 flex items-center justify-center border-[1.3px] border-[#0D80F2] cursor-pointer 
+      ${index === 0 ? "bg-[#0d80f24c]" : "bg-transparent"}`}
               >
                 <p className="t-1 text-[#0D80F2]">{i.btn}</p>
               </button>
@@ -28,23 +31,25 @@ const Events_gallery = () => {
           </div>
         </div>
         <div className="w-[95%] mx-auto">
-          <LightGallery
-            speed={500}
-            plugins={[lgThumbnail, lgZoom]}
-            selector="a"
-          >
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {events_gallery.map((i, index) => (
-                <a key={index} href={i.img}>
-                  <img
-                    className="w-full h-60 object-cover rounded-lg shadow-md"
-                    src={i.img}
-                    alt={`Event ${index + 1}`}
-                  />
-                </a>
-              ))}
-            </div>
-          </LightGallery>
+          <Marquee gradient={false} speed={40}>
+            <LightGallery
+              speed={500}
+              plugins={[lgThumbnail, lgZoom]}
+              selector="a"
+            >
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {events_gallery.map((i, index) => (
+                  <a key={index} href={i.img}>
+                    <img
+                      className="w-full h-60 object-cover rounded-lg shadow-md"
+                      src={i.img}
+                      alt={`Event ${index + 1}`}
+                    />
+                  </a>
+                ))}
+              </div>
+            </LightGallery>
+          </Marquee>
         </div>
       </div>
     </>

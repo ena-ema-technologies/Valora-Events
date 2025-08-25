@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const testimonials = [
   {
@@ -53,73 +53,76 @@ export default function TestimonialCarousel() {
 
   return (
     <>
-      <div className="min-h-screen max-w-[95%] mx-auto py-16">
-        <div className="mb-10 space-y-3">
+      <div className="min-h-screen max-w-[95%] mx-auto pt-16 md:pb-16">
+        <div className="space-y-3">
           <p className="t-5 font-montserrat">Testimonials</p>
           <p className="t-2">
             From experience to professionalism, everything you need to create
             the next event successful
           </p>
         </div>
-        <div className="relative w-full flex justify-center items-center py-10 bg-inherit">
-          {/* Background image */}
-          <div className="absolute top-0 left-0 w-full h-full bg-[url('/6_testimonials/objects.png')] bg-cover bg-center bg-no-repeat z-0"></div>
-
-          {/* Carousel container */}
-          <div className="overflow-hidden w-full relative z-10">
-            <div
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{
-                transform: `translateX(-${current * slidePercentage}%)`,
-              }}
-            >
-              {testimonials.map((t) => (
-                <div
-                  key={t.id}
-                  className="min-w-full md:min-w-[60%] mx-2 
-             bg-white/30 backdrop-blur-md 
-             rounded-3xl shadow-2xl p-6 md:p-10 text-center relative"
-                >
-                  {/* Left Button */}
-                  <button
-                    onClick={prevSlide}
-                    className="absolute left-2 top-1/2 -translate-y-1/2 text-white p-2 rounded-full shadow-md z-10 md:left-4"
+        <div className="relative h-screen flex items-center justify-center">
+          <Image
+            src="/6_testimonials/objects.png"
+            alt="img"
+            fill
+            className="object-cover absolute"
+          />
+          <div className="w-full flex justify-center items-center py-10 bg-inherit">
+            <div className="absolute top-0 left-0 w-full h-full "></div>
+            <div className="overflow-hidden w-full relative z-10">
+              <div
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{
+                  transform: `translateX(-${current * slidePercentage}%)`,
+                }}
+              >
+                {testimonials.map((t) => (
+                  <div
+                    key={t.id}
+                    className="min-w-full md:min-w-[60%] mx-2
+               bg-white/30 backdrop-blur-md
+               rounded-3xl shadow-2xl p-6 md:p-10 text-center relative"
                   >
-                    <Image
-                      height={25}
-                      width={25}
-                      src="/6_testimonials/left-arrow.png"
-                      alt="img"
-                    ></Image>
-                  </button>
-
-                  {/* Right Button */}
-                  <button
-                    onClick={nextSlide}
-                    className="absolute right-2 top-1/2 -translate-y-1/2 text-white p-2 rounded-full shadow-md z-10 md:right-4"
-                  >
-                    <Image
-                      height={25}
-                      width={25}
-                      src="/6_testimonials/right-arrow.png"
-                      alt="img"
-                    ></Image>
-                  </button>
-
-                  <p className="carousel-desc leading-relaxed">{t.text}</p>
-                  <div className="mt-6 flex flex-col items-center">
-                    <img
-                      src={t.image}
-                      alt={t.name}
-                      className="w-12 h-12 md:w-16 md:h-16 rounded-full border-2 border-blue-500"
-                    />
-                    <h3 className="mt-3 carousel-name">{t.name}</h3>
-                    <p className="text-[#6E6C83] text-[18px] font-[300]">
-                      {t.role}
-                    </p>
+                    {/* Left Button */}
+                    <button
+                      onClick={prevSlide}
+                      className="absolute left-2 top-1/2 -translate-y-1/2 text-white p-2 rounded-full shadow-md z-10 md:left-4"
+                    >
+                      <Image
+                        height={25}
+                        width={25}
+                        src="/6_testimonials/left-arrow.png"
+                        alt="img"
+                      ></Image>
+                    </button>
+                    {/* Right Button */}
+                    <button
+                      onClick={nextSlide}
+                      className="absolute right-2 top-1/2 -translate-y-1/2 text-white p-2 rounded-full shadow-md z-10 md:right-4"
+                    >
+                      <Image
+                        height={25}
+                        width={25}
+                        src="/6_testimonials/right-arrow.png"
+                        alt="img"
+                      ></Image>
+                    </button>
+                    <p className="carousel-desc leading-relaxed">{t.text}</p>
+                    <div className="mt-6 flex flex-col items-center">
+                      <img
+                        src={t.image}
+                        alt={t.name}
+                        className="w-12 h-12 md:w-16 md:h-16 rounded-full border-2 border-blue-500"
+                      />
+                      <h3 className="mt-3 carousel-name">{t.name}</h3>
+                      <p className="text-[#6E6C83] text-[18px] font-[300]">
+                        {t.role}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
