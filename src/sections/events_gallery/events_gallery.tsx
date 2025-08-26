@@ -15,7 +15,7 @@ import Marquee from "react-fast-marquee";
 const Events_gallery = () => {
   return (
     <>
-      <div className="min-h-screen w-full space-y-10 py-16">
+      <div className="min-h-screen w-full space-y-10 my-18 pt-16 md:pt-0">
         <div className="text-center space-y-6 mb-12">
           <p className="t-5 font-montserrat">Events Gallery</p>
           <div className="md:max-w-2xl w-[90%] mx-auto flex items-center justify-center space-x-5">
@@ -30,7 +30,7 @@ const Events_gallery = () => {
             ))}
           </div>
         </div>
-        <div className="w-[95%] mx-auto">
+        <div>
           <Marquee gradient={false} speed={40}>
             <LightGallery
               speed={500}

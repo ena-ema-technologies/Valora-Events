@@ -2,14 +2,18 @@ import why_choose_us from "../../utils/jsons/why_choose_us.json";
 const Why_choose_us = () => {
   return (
     <>
-      <div className="min-h-screen w-full overflow-hidden md:py-16 flex items-center justify-between gap-x-20 flex-col md:flex-row px-4">
-        <div className="hidden lg:flex items-center justify-center md:w-[50%] h-screen w-[95%]">
-          <div className="rounded-full overflow-hidden w-[400px] h-[400px] md:mr-20 flex items-center justify-center scale-[170%]">
-            <img src="/7_why_choose_us/1.jpg" alt="Why Choose Us" />
+      <div className="h-screen w-full my-0 md:my-18 flex items-center justify-between gap-x-20">
+        <div className="hidden md:flex bg-red-200 md:w-[50%] h-full">
+          <div className="h-full w-full flex items-center justify-start">
+            <img
+              src="/7_why_choose_us/1.png"
+              className="object-cover h-full w-full"
+              alt="Why Choose Us"
+            />
           </div>
         </div>
 
-        <div className="md:w-[50%] w-[95%] h-screen flex items-center justify-center">
+        <div className="md:w-[50%] w-full h-screen flex items-center justify-center px-4">
           <div>
             <div className="mb-10 space-y-3">
               <p className="t-5 font-montserrat">Why choose us?</p>

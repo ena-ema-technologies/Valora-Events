@@ -53,7 +53,7 @@ export default function TestimonialCarousel() {
 
   return (
     <>
-      <div className="min-h-screen max-w-[95%] mx-auto pt-16 md:pb-16">
+      <div className="min-h-screen max-w-full md:px-12 px-4 my-18 pt-12 md:pt-0">
         <div className="space-y-3">
           <p className="t-5 font-montserrat">Testimonials</p>
           <p className="t-2">
@@ -61,12 +61,12 @@ export default function TestimonialCarousel() {
             the next event successful
           </p>
         </div>
-        <div className="relative h-screen flex items-center justify-center">
+        <div className="relative h-[80vh] flex items-center justify-center">
           <Image
             src="/6_testimonials/objects.png"
             alt="img"
             fill
-            className="object-cover absolute"
+            className="object-cover"
           />
           <div className="w-full flex justify-center items-center py-10 bg-inherit">
             <div className="absolute top-0 left-0 w-full h-full "></div>

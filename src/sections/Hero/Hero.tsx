@@ -29,7 +29,7 @@ export default function Hero() {
   const brands = [brand1, brand2, brand3, brand4];
 
   return (
-    <div className="min-h-screen relative pt-24 pb-10">
+    <div className="min-h-screen relative pt-[100px] pb-14">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image

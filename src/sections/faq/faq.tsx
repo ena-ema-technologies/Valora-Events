@@ -13,20 +13,20 @@ const Faq = () => {
   };
 
   return (
-    <section className="pb-16 bg-[#F6F8FF] px-4">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-medium text-[#2D2D2D] mb-12 font-montserrat text-center sm:text-left pl-3">
+    <section className="mt-18 md:mb-18 mb-0 bg-[#F6F8FF] max-w-full md:px-12 px-4 pt-12 md:pt-0">
+      <div>
+        <h2 className="text-3xl sm:text-4xl font-medium text-[#2D2D2D] mb-12 font-montserrat text-center sm:text-left">
           Frequently Asked Questions
         </h2>
 
         {/* Desktop view (2 columns) */}
         <div className="hidden lg:grid grid-cols-2 gap-8">
           {/* Left side - Questions list */}
-          <div className="space-y-4 bg-white p-4 rounded-lg">
+          <div className="space-y-4 bg-white py-4 rounded-lg">
             {faqData.map((faq, index) => (
               <div
                 key={index}
-                className={`flex items-center gap-4 p-4 rounded-lg cursor-pointer transition-all duration-200 ${
+                className={`flex items-center gap-x-4 py-4 rounded-lg cursor-pointer transition-all duration-200 ${
                   activeIndex === index ? "bg-blue-50" : "hover:bg-gray-50"
                 }`}
                 onClick={() => toggleFAQ(index)}
@@ -67,7 +67,7 @@ const Faq = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 40 }}
                 transition={{ duration: 0.4 }}
-                className="w-full h-auto bg-[#FAFBFF] shadow-md rounded-xl p-5"
+                className="w-full h-auto bg-[#FAFBFF] shadow-md rounded-xl py-5 pl-5"
               >
                 <h3 className="text-lg sm:text-xl font-semibold text-[#0D80F2] mb-4">
                   {faqData[activeIndex].question}

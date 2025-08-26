@@ -1,12 +1,12 @@
 const Get_in_touch = () => {
   return (
     <>
-      <div className="min-h-screen w-full mt-3.5 md:mt-14 pt-6 md:pt-0 custom-blue relative">
+      <div className="min-h-screen mt-3.5 md:mt-20 pt-6 md:pt-0 custom-blue relative max-w-full md:px-12 px-4">
         {/* main flex section */}
         <div className="flex items-center justify-between flex-col md:flex-row text-white custom-blue">
           {/* left side form */}
-          <div className="md:flex-[45%] flex items-center justify-center h-screen">
-            <div className="md:w-[80%] w-[90%] space-y-5">
+          <div className="md:flex-[45%] flex items-center h-screen">
+            <div className="md:w-[80%] space-y-5">
               <p className="t-5 font-montserrat">Get in touch with us</p>
               <div className="flex items-center space-x-3">
                 <div className="h-10 w-10">
@@ -70,7 +70,7 @@ const Get_in_touch = () => {
 
         {/* bottom floating box */}
         <div className="absolute -bottom-32 md:-bottom-20 left-1/2 -translate-x-1/2 w-full px-4 flex items-center justify-center">
-          <div className="flex flex-col md:flex-row items-center justify-between bg-white corner py-7 px-6 md:px-14 gap-y-6 md:gap-x-14 w-full max-w-5xl shadow-lg">
+          <div className="flex flex-col md:flex-row items-center justify-between bg-white corner md:py-7 py-5 px-6 md:px-14 gap-y-6 md:gap-x-14 w-full max-w-5xl shadow-lg">
             <div className="text-[24px] md:text-[30px] font-[700] leading-9 md:text-left">
               <p className="font-montserrat text-[#0D80F2]">
                 Let’s make your next event

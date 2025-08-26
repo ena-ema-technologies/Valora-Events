@@ -2,7 +2,7 @@ import planning_process from "../../utils/jsons/planning_process.json";
 const Planning_process = () => {
   return (
     <>
-      <div className="flex flex-col items-center justify-center min-h-screen w-full mx-auto px-4 space-y-10 py-16 bg-gradient-to-b from-[#0D80F2] from-[70%] to-white text-white">
+      <div className="flex flex-col items-center justify-center min-h-screen max-w-full md:px-12 px-6 space-y-10 my-18 pt-16 md:pt-0 bg-gradient-to-b from-[#0D80F2] from-[70%] to-white text-white">
         <div className="text-center space-y-3">
           <p className="t-5 font-montserrat">Our 3-Step Planning Process</p>
           <p className="t-2">
@@ -10,7 +10,7 @@ const Planning_process = () => {
             execute, from initial <br /> consulation to post-event follow up.
           </p>
         </div>
-        <div className="h-full w-[95%] flex items-center justify-between md:gap-x-12 gap-x-0 gap-y-14 md:gap-y-0 flex-col lg:flex-row mb-24">
+        <div className="h-full flex items-center justify-between md:gap-x-12 gap-x-0 gap-y-14 md:gap-y-0 flex-col lg:flex-row mb-24">
           {planning_process.map((i, index) => (
             <div key={index}>
               <div className="h-[50px] w-[50px] mb-6">

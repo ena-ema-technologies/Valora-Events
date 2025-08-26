@@ -7,8 +7,8 @@ const Navbar = () => {
 
   return (
     <nav className="w-full fixed bg-white z-30 shadow-lg">
-      <div className="lg:px-20 md:px-6 flex justify-between items-center h-[50px] md:h-[56px] w-full">
-        <div className="cursor-pointer flex-[10%] flex justify-center items-center">
+      <div className="px-4 md:px-12 flex justify-between items-center h-[50px] md:h-[56px] w-full">
+        <div className="cursor-pointer flex-[10%] flex items-center">
           <Link href="/">
             <div className="w-full h-full">
               <img
@@ -19,7 +19,7 @@ const Navbar = () => {
             </div>
           </Link>
         </div>
-        <ul className=" hidden lg:flex space-x-4 xl:space-x-7 justify-center h-full items-center text-[14px]">
+        <ul className="hidden lg:flex space-x-4 xl:space-x-10 justify-center h-full items-center text-[14px]">
           <Link href="/" className="nav-links">
             Home
           </Link>
@@ -39,9 +39,9 @@ const Navbar = () => {
             Testimonials
           </Link>
         </ul>
-        <div className="hidden md:flex flex-[20%] justify-end lg:space-x-6 space-x-2  text-[14px] ml-3">
+        <div className="hidden md:flex flex-[20%] justify-end lg:space-x-6 space-x-2 text-[14px]">
           <button className="text-[#0D80F2] cursor-pointer">Contact us</button>
-          <button className="corner px-2 py-1 flex items-center justify-center bg-[#0D80F2] cursor-pointer">
+          <button className="corner px-4 py-2 flex items-center justify-center bg-[#0D80F2] cursor-pointer">
             <p className="text-white">Get a Free Quote</p>
           </button>
         </div>

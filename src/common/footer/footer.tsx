@@ -5,8 +5,8 @@ import footer from "../../utils/jsons/footer.json";
 const Footer = () => {
   return (
     <>
-      <div className="min-h-[40%] w-full pt-56 md:pt-44 custom-blue">
-        <div className="md:pl-39 pl-4 mb-10">
+      <div className="min-h-[40%] w-full pt-56 md:pt-44 custom-blue max-w-full md:px-12 px-4">
+        <div className="mb-10">
           <div className="w-28">
             <Image
               src="/logo/logo.png"
@@ -17,8 +17,8 @@ const Footer = () => {
             />
           </div>
         </div>
-        <div className="flex items-center justify-center md:w-[95%] mx-auto flex-col md:flex-row md:mb-20 mb-10">
-          <div className="flex items-center flex-col md:flex-row w-full md:px-32 px-6 md:gap-x-20 gap-y-7">
+        <div className="flex items-center justify-center mx-auto flex-col md:flex-row md:mb-20 mb-10">
+          <div className="flex items-center flex-col md:flex-row w-full md:gap-x-20 gap-y-7">
             <div className="md:flex-[80%] w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {footer.map((i, index) => (
                 <ul key={index} className="text-white self-start">
@@ -53,7 +53,7 @@ const Footer = () => {
           </div>
         </div>
         <hr className="text-white" />
-        <div className="flex items-center justify-between md:w-[95%] mx-auto text-white w-full md:px-32 py-5 px-4">
+        <div className="flex items-center justify-between mx-auto text-white py-5">
           <ul className="flex space-x-4 xl:space-x-7 items-center text-[14px] font-[400]">
             <Link href="/" className="nav-links">
               Privacy Policy
@@ -72,7 +72,7 @@ const Footer = () => {
             </Link>
           </ul>
           <p className="text-[12px] font-[300] tracking-wider">
-            © 2021 All Rights Reserved
+            © 2025 All Rights Reserved
           </p>
         </div>
       </div>

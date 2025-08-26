@@ -3,7 +3,7 @@ import what_do_we_do from "../../utils/jsons/what_do_we_do.json";
 const What_do_we_do = () => {
   return (
     <>
-      <div className="flex flex-col items-center justify-center min-h-screen max-w-[1284px] mx-auto px-4 space-y-10 pb-18">
+      <div className="flex flex-col items-center justify-center min-h-screen max-w-full md:px-12 px-4 space-y-10 mb-18">
         <div className="text-center space-y-2">
           <p className="t-5 font-montserrat">What do we do</p>
           <p className="t-2">

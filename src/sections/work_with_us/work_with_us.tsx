@@ -12,8 +12,8 @@ import { eventStories } from "../../utils/extra/work_with_us";
 
 const Work_With_Us = () => {
   return (
-    <section className="bg-white pb-20 px-4">
-      <div className="container mx-auto">
+    <section className="bg-white my-18 max-w-full md:px-12 px-4">
+      <div>
         {/* Header */}
         <div className="mb-12 space-y-3 md:space-y-2">
           <h2 className="t-5 font-montserrat md:text-left text-center">
