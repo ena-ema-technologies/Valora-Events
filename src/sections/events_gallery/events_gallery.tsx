@@ -30,18 +30,52 @@ const Events_gallery = () => {
             ))}
           </div>
         </div>
-        <div>
+        <div className="space-y-4">
+          {/* First Row */}
           <Marquee gradient={false} speed={40}>
             <LightGallery
               speed={500}
               plugins={[lgThumbnail, lgZoom]}
               selector="a"
             >
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {events_gallery.map((i, index) => (
-                  <a key={index} href={i.img}>
+              <div className="flex gap-4">
+                {[
+                  ...events_gallery.slice(
+                    0,
+                    Math.ceil(events_gallery.length / 2)
+                  ),
+                  ...events_gallery.slice(
+                    0,
+                    Math.ceil(events_gallery.length / 2)
+                  ),
+                ].map((i, index) => (
+                  <a key={index} href={i.img} className="flex-shrink-0">
                     <img
-                      className="w-full h-60 object-cover rounded-lg shadow-md"
+                      className="w-70 h-60 object-cover rounded-lg shadow-md mr-4"
+                      src={i.img}
+                      alt={`Event ${index + 1}`}
+                    />
+                  </a>
+                ))}
+              </div>
+            </LightGallery>
+          </Marquee>
+
+          {/* Second Row */}
+          <Marquee gradient={false} speed={40} direction="right">
+            <LightGallery
+              speed={500}
+              plugins={[lgThumbnail, lgZoom]}
+              selector="a"
+            >
+              <div className="flex gap-4">
+                {[
+                  ...events_gallery.slice(Math.ceil(events_gallery.length / 2)),
+                  ...events_gallery.slice(Math.ceil(events_gallery.length / 2)),
+                ].map((i, index) => (
+                  <a key={index} href={i.img} className="flex-shrink-0">
+                    <img
+                      className="w-70 h-60 object-cover rounded-lg shadow-md mr-4"
                       src={i.img}
                       alt={`Event ${index + 1}`}
                     />

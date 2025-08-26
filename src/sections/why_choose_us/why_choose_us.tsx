@@ -3,7 +3,7 @@ const Why_choose_us = () => {
   return (
     <>
       <div className="h-screen w-full my-0 md:my-18 flex items-center justify-between gap-x-20">
-        <div className="hidden md:flex bg-red-200 md:w-[50%] h-full">
+        <div className="hidden md:flex md:w-[50%] h-full">
           <div className="h-full w-full flex items-center justify-start">
             <img
               src="/7_why_choose_us/1.png"

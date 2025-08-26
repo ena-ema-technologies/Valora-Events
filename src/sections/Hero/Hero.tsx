@@ -42,10 +42,17 @@ export default function Hero() {
         <div className="absolute inset-0" />
       </div>
 
+      {/* 🔥 Gradient Overlay on Top */}
+      <div
+        className="absolute top-0 left-0 w-full h-[280px] 
+                   bg-gradient-to-b from-black/80 via-black/30 to-transparent 
+                   z-[5]"
+      />
+
       {/* Content */}
       <div className="relative z-10 min-h-screen flex flex-col">
         {/* Header */}
-        <header className="pb-4 text-center">
+        <header className="pb-4 text-center relative z-20">
           <div className="inline-block bg-white/20 rounded-full px-4 py-2 border border-white/30">
             <span className="text-white text-sm font-medium">
               100% event success rate
